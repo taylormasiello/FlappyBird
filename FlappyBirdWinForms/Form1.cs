@@ -46,7 +46,7 @@ namespace FlappyBirdWinForms
 
         private void gmTimerEvent(object sender, EventArgs e)
         {
-            //dwn"pushes the flappyBird dwn, by adding gravity to the top its top"
+            //dwn"for each tick of timer, pushes the flappyBird dwn, by adding gravity to the top its top"
             flappyBird.Top += gravity;
             pipeBottom.Left -= pipeSpeed;
             pipeTop.Left -= pipeSpeed;
@@ -54,15 +54,15 @@ namespace FlappyBirdWinForms
             scoreText.Text = "Score: " + score;
 
             //dwn"checks if pipes have left screen; if pipe location is too low, will reset it to our given value"
-            if (pipeBottom.Left < -100)
+            if (pipeBottom.Left < -75)
             {
                 pipeBottom.Left = 800;
                 score++;
                 //^"increments score for each successfully passed pipe"
             }
-            if (pipeTop.Left < -100)
+            if (pipeTop.Left < -75)
             {
-                pipeTop.Left = 950;
+                pipeTop.Left = 900;
                 score++;
             }
 
