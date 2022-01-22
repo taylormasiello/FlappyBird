@@ -13,7 +13,7 @@ namespace FlappyBirdWinForms
     public partial class Form1 : Form
     {
 
-        int pipeSpeed = 13;
+        int pipeSpeed = 15;
         int gravity = 17;
         int score = 0;
 
@@ -66,7 +66,31 @@ namespace FlappyBirdWinForms
                 score++;
             }
 
-            if(flappyBird.Bounds.IntersectsWith(pipeBottom.Bounds) || flappyBird.Bounds.IntersectsWith(pipeTop.Bounds) || flappyBird.Bounds.IntersectsWith(ground.Bounds))
+            //if(flappyBird.Top < -150)
+            //{
+            //    endGame();
+            //}
+
+            if (score > 5)
+            {
+                pipeSpeed = 30;
+            }
+            if (score > 15)
+            {
+                pipeSpeed = 45;
+            }
+            if (score > 25)
+            {
+                pipeSpeed = 60;
+            }
+            if (score > 50)
+            {
+                pipeSpeed = 75;
+            }
+
+
+
+            if (flappyBird.Bounds.IntersectsWith(pipeBottom.Bounds) || flappyBird.Bounds.IntersectsWith(pipeTop.Bounds) || flappyBird.Bounds.IntersectsWith(ground.Bounds) || flappyBird.Top < -150)
             {
                 endGame();
             }
