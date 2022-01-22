@@ -83,10 +83,10 @@ namespace FlappyBirdWinForms
             {
                 pipeSpeed = 60;
             }
-            if (score > 50)
-            {
-                pipeSpeed = 75;
-            }
+            //if (score > 50)
+            //{
+            //    pipeSpeed = 75;
+            //}
 
 
 
